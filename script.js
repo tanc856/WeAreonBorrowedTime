@@ -1,5 +1,5 @@
 const scrollSpeed = 0.6;
-        const replacementWords = ["Free ", "Sale", "New"];
+        const replacementWords = ["Free", "Sale!", "New items in!"];
 
         function autoScroll() {
             document.body.scrollTop += scrollSpeed;
