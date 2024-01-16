@@ -1,34 +1,30 @@
-/*
-  This is your site JavaScript code - you can add interactivity!
-*/
+const scrollSpeed = 0.6;
+        const randomWords = ["Free", "Sale", "New"];
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+        function autoScroll() {
+            document.body.scrollTop += scrollSpeed;
+            document.documentElement.scrollTop += scrollSpeed;
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the steps in the TODO 🚧
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-if (btn) { // Detect clicks on the button
-  btn.onclick = function () {
-    // The 'dipped' class in style.css changes the appearance on click
-    btn.classList.toggle("dipped");
-  };
-}
+            setTimeout(autoScroll, 50);
+        }
 
+        function randomizeWords() {
+            const columns = document.querySelectorAll('.column');
 
-// ----- GLITCH STARTER PROJECT HELPER CODE -----
+            columns.forEach(column => {
+                const words = column.textContent.split(' ');
+                const randomIndex = Math.floor(Math.random() * randomWords.length);
+                const randomWord = randomWords[randomIndex];
+                const randomWordIndex = Math.floor(Math.random() * words.length);
 
-// Open file when the link in the preview is clicked
-let goto = (file, line) => {
-  window.parent.postMessage(
-    { type: "glitch/go-to-line", payload: { filePath: file, line: line } }, "*"
-  );
-};
-// Get the file opening button from its class name
-const filer = document.querySelectorAll(".fileopener");
-filer.forEach((f) => {
-  f.onclick = () => { goto(f.dataset.file, f.dataset.line); };
-});
+                words[randomWordIndex] = randomWord;
+                column.textContent = words.join(' ');
+            });
+
+            setTimeout(randomizeWords, 1000); //speed of word change
+        }
+
+        window.onload = function () {
+            autoScroll();
+            randomizeWords();
+        };
