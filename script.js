@@ -1,5 +1,5 @@
 const scrollSpeed = 0.6;
-        const randomWords = ["Free", "Sale", "New"];
+        const replacementWords = ["Free", "Sale", "New"];
 
         function autoScroll() {
             document.body.scrollTop += scrollSpeed;
@@ -8,23 +8,34 @@ const scrollSpeed = 0.6;
             setTimeout(autoScroll, 50);
         }
 
-        function randomizeWords() {
+        function replaceWords() {
             const columns = document.querySelectorAll('.column');
 
             columns.forEach(column => {
                 const words = column.textContent.split(' ');
-                const randomIndex = Math.floor(Math.random() * randomWords.length);
-                const randomWord = randomWords[randomIndex];
-                const randomWordIndex = Math.floor(Math.random() * words.length);
 
-                words[randomWordIndex] = randomWord;
-                column.textContent = words.join(' ');
+                // Check if replacement should occur (randomly)
+                if (Math.random() < 0.2) { // Adjust the probability as needed
+                    // Replace a random word with the replacement words
+                    const randomIndex = Math.floor(Math.random() * words.length);
+                    const randomWord = replacementWords[Math.floor(Math.random() * replacementWords.length)];
+                    words[randomIndex] = randomWord;
+
+                    // Update the column's content
+                    column.textContent = words.join(' ');
+
+                    // Restore original words after a short delay
+                    setTimeout(() => {
+                        column.textContent = words.join(' ');
+                    }, 1000); // Adjust the delay time as needed
+                }
             });
 
-            setTimeout(randomizeWords, 1000); //speed of word change
+            // Call the function recursively for continuous word randomization
+            setTimeout(replaceWords, 500); // Adjust the interval as needed
         }
 
         window.onload = function () {
             autoScroll();
-            randomizeWords();
+            replaceWords();
         };
