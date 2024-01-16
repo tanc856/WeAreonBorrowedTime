@@ -1,19 +1,18 @@
 body {
   display: flex;
-  font-size: 1em;
+  font-size: 1.8em;
 }
 
 .column {
   flex: 1;
-  border: 1px solid #ddd;
   padding: 10px;
   text-align: left;
-  transition: flex 0.5s, font-size 0.5s;
+  transition: flex 1s, font-size 1s;
 }
 
 .column:hover {
   flex: 4;
-  font-size: 1.8em; /* You can adjust the font size as needed */
+  font-size: 2.3em; /* You can adjust the font size as needed */
 }
 
 .highlight {
