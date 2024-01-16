@@ -1,16 +1,21 @@
 body {
-    display: flex;
+  display: flex;
 }
 
 .column {
-    flex: 1;
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-    transition: flex 0.5s, font-size 0.5s;
+  flex: 1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  transition: flex 0.5s, font-size 0.5s;
 }
 
 .column:hover {
-    flex: 4;
-    font-size: 1.8em; /* You can adjust the font size as needed */
+  flex: 4;
+  font-size: 1.8em; /* You can adjust the font size as needed */
+}
+
+.highlight {
+  background-color: red; /* Adjust the color as needed */
+  color: white;
 }

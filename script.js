@@ -1,5 +1,5 @@
 const scrollSpeed = 0.6;
-        const replacementWords = ["Free", "Sale", "New"];
+        const replacementWords = ["Free ", "Sale", "New"];
 
         function autoScroll() {
             document.body.scrollTop += scrollSpeed;
@@ -12,22 +12,22 @@ const scrollSpeed = 0.6;
             const columns = document.querySelectorAll('.column');
 
             columns.forEach(column => {
-                const words = column.textContent.split(' ');
+                const words = column.innerHTML.split(' ');
 
                 // Check if replacement should occur (randomly)
                 if (Math.random() < 0.2) { // Adjust the probability as needed
                     // Replace a random word with the replacement words
                     const randomIndex = Math.floor(Math.random() * words.length);
                     const randomWord = replacementWords[Math.floor(Math.random() * replacementWords.length)];
-                    words[randomIndex] = randomWord;
+                    words[randomIndex] = `<span class="highlight">${randomWord}</span>`;
 
                     // Update the column's content
-                    column.textContent = words.join(' ');
+                    column.innerHTML = words.join(' ');
 
                     // Restore original words after a short delay
                     setTimeout(() => {
-                        column.textContent = words.join(' ');
-                    }, 1000); // Adjust the delay time as needed
+                        column.innerHTML = words.join(' ');
+                    }, 500); // Adjust the delay time as needed
                 }
             });
 
