@@ -17,7 +17,6 @@ body {
 }
 
 .column {
-  display: flex;
   flex-direction: column;
   padding: 8px;
   transition: flex 1s, font-size 1s;
