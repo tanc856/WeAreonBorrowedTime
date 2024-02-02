@@ -1,7 +1,7 @@
 body {
   display: flex;
   font-size: 1.5em;
-  font-family: Goudy1911;
+  font-family: National;
   line-height: 100%;
 }
 
@@ -14,6 +14,7 @@ body {
 
 .column:hover {
   flex: 4;
+  line-height: 100%;
   font-size: 2em; /* You can adjust the font size as needed */
 }
 
@@ -23,6 +24,6 @@ body {
 }
 
 @font-face {
-  font-family: Goudy1911;
-  src: url(https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/GoudyBookletter1911-Regular.ttf?v=1706833333597);
+  font-family: 'National';
+  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/National%20Test%20Book.woff?v=1706834140333") format('woff');
 }
