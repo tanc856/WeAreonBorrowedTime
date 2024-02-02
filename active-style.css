@@ -10,7 +10,8 @@ body {
   position: fixed;
   top: 2;
   left: 2;
-  width: 100%;
+  max-width: 100%; /* Limit container width to the viewport width */
+  overflow-y: hidden; /* Hide vertical overflow */
   background-color: #ffffff; /* Optional: Set the background color */
   z-index: 1000; /* Ensure it's above other content */
 }
@@ -35,12 +36,17 @@ body {
 }
 
 .column {
+  flex-wrap: wrap;
   flex: 1;
   padding: 8px;
   text-align: left;
   transition: flex 1s, font-size 1s;
   line-height: 1.3;
   column-count: 5;
+  max-width: 100%; /* Limit column width to the viewport width */
+  overflow-wrap: break-word; /* Enable word wrapping for long words */
+  max-length: calc(100% / 5); /* Limit column width to 20% of the container */
+  box-sizing: border-box;
 }
 
 .column:hover {
