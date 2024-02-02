@@ -8,6 +8,14 @@ const scrollSpeed = 0.5; //speed of automatic page scrolling
             setTimeout(autoScroll, 100);
         }
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Set the initial flex and font-size for the first column
+  var firstColumn = document.querySelector("#col1");
+  firstColumn.style.flex = "4";
+  firstColumn.style.fontSize = "2em"; // You can adjust the font size as needed
+});
+
+
         function replaceWords() {
             const columns = document.querySelectorAll('.column');
 
