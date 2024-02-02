@@ -1,19 +1,8 @@
 body {
-  display: flex;
   font-family: PressuraMono;
   line-height: 1.3;
   overflow-y: auto;
   font-size: 1em;
-}
-
-.container {
-  position: fixed;
-  top: 2;
-  left: 2;
-  max-width: 100%; /* Limit container width to the viewport width */
-  overflow-y: hidden; /* Hide vertical overflow */
-  background-color: #ffffff; /* Optional: Set the background color */
-  z-index: 1000; /* Ensure it's above other content */
 }
 
 .flex-container {
@@ -28,9 +17,9 @@ body {
 }
 
 .column {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 8px;
-  text-align: left;
   transition: flex 1s, font-size 1s;
   line-height: 1.3;
 }
@@ -43,7 +32,7 @@ body {
 }
 
 .highlight {
-  background-color: red;
+  background-color: grey;
   color: white;
 }
 
