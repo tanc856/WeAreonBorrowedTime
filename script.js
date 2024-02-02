@@ -1,5 +1,5 @@
 const scrollSpeed = 0.3; //speed of automatic page scrolling
-const replacementWords = ["Free", "Sale!", "New items in!"];
+const replacementWords = ["*", "*", "*"];
 
 function autoScroll() {
   document.body.scrollTop += scrollSpeed;
@@ -11,8 +11,8 @@ function autoScroll() {
 document.addEventListener("DOMContentLoaded", function () {
   // Set the initial flex and font-size for the first column
   const firstColumn = document.querySelector("#col1");
-  firstColumn.style.flex = "4";
-  firstColumn.style.fontSize = "1.8em"; // You can adjust the font size as needed
+  firstColumn.style.flex = "6";
+  firstColumn.style.fontSize = "2.2em"; // You can adjust the font size as needed
 });
 
 function replaceWords() {
