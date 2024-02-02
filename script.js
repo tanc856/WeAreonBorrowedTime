@@ -1,4 +1,4 @@
-const scrollSpeed = 0.5; //speed of automatic page scrolling
+const scrollSpeed = 0.3; //speed of automatic page scrolling
 const replacementWords = ["Free", "Sale!", "New items in!"];
 
 function autoScroll() {
