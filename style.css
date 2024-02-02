@@ -1,8 +1,8 @@
 body {
   display: flex;
-  font-size: 1.5em;
-  font-family: National;
-  line-height: 100%;
+  font-size: 1em;
+  font-family: PressuraMono;
+  line-height: normal;
 }
 
 .column {
@@ -10,11 +10,12 @@ body {
   padding: 10px;
   text-align: left;
   transition: flex 1s, font-size 1s;
+  line-height: 1.4;
 }
 
 .column:hover {
   flex: 4;
-  line-height: 100%;
+  line-height: 1.4;
   font-size: 2em; /* You can adjust the font size as needed */
 }
 
@@ -24,6 +25,7 @@ body {
 }
 
 @font-face {
-  font-family: 'National';
-  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/National%20Test%20Book.woff?v=1706834140333") format('woff');
+  font-family: "PressuraMono";
+  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Grilli%20Type%20Pressura%20Mono%20Regular.otf?v=1706834991893")
+    format("woff");
 }

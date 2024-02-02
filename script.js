@@ -1,11 +1,11 @@
-const scrollSpeed = 0.6;
+const scrollSpeed = 0.5; //speed of automatic page scrolling
         const replacementWords = ["Free", "Sale!", "New items in!"];
 
         function autoScroll() {
             document.body.scrollTop += scrollSpeed;
             document.documentElement.scrollTop += scrollSpeed;
 
-            setTimeout(autoScroll, 50);
+            setTimeout(autoScroll, 100);
         }
 
         function replaceWords() {
@@ -32,7 +32,7 @@ const scrollSpeed = 0.6;
             });
 
             // Call the function recursively for continuous word randomization
-            setTimeout(replaceWords, 500); // Adjust the interval as needed
+            setTimeout(replaceWords, 700); // Adjust the interval as needed, the bigger the slower
         }
 
         window.onload = function () {
