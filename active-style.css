@@ -1,5 +1,5 @@
 body {
-  font-family: PressuraMono;
+  font-family: GTAlpinaTypewriter;
   line-height: 1.3;
   overflow-y: auto;
   font-size: 1em;
@@ -36,8 +36,8 @@ body {
 }
 
 @font-face {
-  font-family: "PressuraMono";
-  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Grilli%20Type%20Pressura%20Mono%20Regular.otf?v=1706834991893")
+  font-family: "GTAlpinaTypewriter";
+  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/GT%20Alpina%20Typewriter%20Regular.otf?v=1707418832977")
     format("woff");
 }
 
