@@ -9,20 +9,24 @@
   <style>
     body {
       font-family: GTAlpinaTypewriter;
+      color: blue;
     }
 
     .title {
-      position: fixed;
-      top: 20%;
-      column-count: 1;
-      column-width: 300px;
-      max-width: 500px;
+      font-family: "GapSans";
+      height: 100%;
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-size: 10em;
+      text-align: center;
     }
 
     .column-intro {
       columns: 1;
       font-size: 3em;
-      color: blue;
     }
 
     .links {
@@ -45,6 +49,12 @@
         format("woff");
     }
 
+    @font-face {
+      font-family: "GapSans";
+      src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
+        format("woff");
+    }
+
     a:link,
     a:visited {
       color: blue;
@@ -58,7 +68,11 @@
     }
   </style>
   <body>
-    <div class="column-intro">
+    <div class="title">
+      <span>We Are On Borrowed Time</span>
+    </div>
+
+    <!--     <div class="column-intro">
       <span>
         ** is a week-long documentation and is a reflection on hyperconsumerism
         in the digital age and visualizes our loss of time. It explores both
@@ -66,7 +80,7 @@
         digital notifications interrupt our lives and influence our behavior.
         The timing of each ad reflects real-life documentation.</span
       >
-    </div>
+    </div> -->
 
     <div class="links">
       <br />
