@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THESIS-HOMEPAGE</title>
-  </head>
-  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THESIS-HOMEPAGE</title>
+</head>
+<body>
+  <div class="title">
+    <span>We Are On Borrowed Time</span>
+  </div>
+
+  <div class="column-intro">
+    <span>
+      ** is a week-long documentation and is a reflection on hyperconsumerism
+      in the digital age and visualizes our loss of time. It explores both
+      passive and active notifications visually. This website mimics how
+      digital notifications interrupt our lives and influence our behavior.
+      The timing of each ad reflects real-life documentation.
+    </span>
+  </div>
+
+  <div class="links">
+    <br />
+    <a href="active.html">active</a>
+    <a href="passive.html">passive</a>
+    <a href="dataviz.html">dataviz</a>
+  </div>
+
   <script>
-    window.addEventListener('load', function() {
+      window.addEventListener('load', function() {
   wrapTextAroundDiv();
 });
 
 function wrapTextAroundDiv() {
-  const textElement = document.querySelector('.column-intro');
-  const divToWrap = document.querySelector('.title');
-  const textRect = textElement.getBoundingClientRect();
-  const divRect = divToWrap.getBoundingClientRect();
+  var textElement = document.querySelector('.column-intro');
+  var divToWrap = document.querySelector('.title');
+  var textRect = textElement.getBoundingClientRect();
+  var divRect = divToWrap.getBoundingClientRect();
 
-  const padding = 10; // Adjust padding as needed
+  var padding = 20; // Adjust padding as needed
 
   // Calculate top padding for text
-  const topPadding = divRect.top - textRect.top + padding;
+  var topPadding = divRect.top - textRect.top + padding;
   textElement.style.paddingLeft = divRect.width + padding + 'px';
   textElement.style.paddingTop = topPadding + 'px';
 }
-
-  
+    
   </script>
 
   <style>
@@ -43,8 +63,8 @@ function wrapTextAroundDiv() {
       width: 70%;
       position: absolute;
       top: 50%;
-      right: 50%;
-      transform: translate(50%, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .column-intro {
@@ -52,6 +72,7 @@ function wrapTextAroundDiv() {
       columns: 1;
       font-size: 2em;
       z-index: 1;
+      margin-top: 20%;
     }
 
     .links {
@@ -92,28 +113,5 @@ function wrapTextAroundDiv() {
       text-decoration: italic;
     }
   </style>
-  <body>
-    <div class="title">
-      <div id="01"><span>We Are On</span></div>
-      <div id="02"><span>Borrowed</span></div>
-      <div id="03"><span>Time</span></div>
-    </div>
-
-    <div class="column-intro">
-      <span>
-        ** is a week-long documentation and is a reflection on hyperconsumerism
-        in the digital age and visualizes our loss of time. It explores both
-        passive and active notifications visually. This website mimics how
-        digital notifications interrupt our lives and influence our behavior.
-        The timing of each ad reflects real-life documentation.</span
-      >
-    </div>
-
-    <div class="links">
-      <br />
-      <a href="active.html">active</a>
-      <a href="passive.html">passive</a>
-      <a href="dataviz.html">dataviz</a>
-    </div>
-  </body>
+</body>
 </html>
