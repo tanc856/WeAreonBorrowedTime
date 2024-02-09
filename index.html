@@ -5,24 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THESIS-HOMEPAGE</title>
   </head>
+  
+  <script>
+    window.addEventListener('load', function() {
+  wrapTextAroundDiv();
+});
+
+function wrapTextAroundDiv() {
+  const textElement = document.querySelector('.column-intro');
+  const divToWrap = document.querySelector('.title');
+  const textRect = textElement.getBoundingClientRect();
+  const divRect = divToWrap.getBoundingClientRect();
+
+  const padding = 10; // Adjust padding as needed
+
+  // Calculate top padding for text
+  const topPadding = divRect.top - textRect.top + padding;
+  textElement.style.paddingLeft = divRect.width + padding + 'px';
+  textElement.style.paddingTop = topPadding + 'px';
+}
+
+  
+  </script>
 
   <style>
     body {
       font-family: GTAlpinaTypewriter;
       color: blue;
+      margin: 0;
+      padding: 10px;
     }
 
     .title {
       font-family: "GapSans";
-      position: fixed;
       font-size: 10em;
       text-align: center;
       width: 70%;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
     }
 
     .column-intro {
+      position: relative;
       columns: 1;
       font-size: 2em;
+      z-index: 1;
     }
 
     .links {
@@ -44,7 +73,7 @@
       src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/GT%20Alpina%20Typewriter%20Regular.otf?v=1707418832977")
         format("woff");
     }
-    
+
     @font-face {
       font-family: "GapSans";
       src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
@@ -65,16 +94,19 @@
   </style>
   <body>
     <div class="title">
-      <span>We Are On Borrowed Time</span>
+      <div id="01"><span>We Are On</span></div>
+      <div id="02"><span>Borrowed</span></div>
+      <div id="03"><span>Time</span></div>
     </div>
-  
+
     <div class="column-intro">
       <span>
         ** is a week-long documentation and is a reflection on hyperconsumerism
         in the digital age and visualizes our loss of time. It explores both
         passive and active notifications visually. This website mimics how
         digital notifications interrupt our lives and influence our behavior.
-        The timing of each ad reflects real-life documentation.</span>
+        The timing of each ad reflects real-life documentation.</span
+      >
     </div>
 
     <div class="links">
