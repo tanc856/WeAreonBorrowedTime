@@ -27,21 +27,20 @@
         height: 98%;
       }
 
-      .title {
+      .title, .links {
         font-family: "GapSans";
         font-size: 7em;
         text-align: left;
       }
 
       .description {
-        font-size: 1.5em;
+        font-size: 2em;
         margin-top: auto; /* Push description to the bottom */
       }
 
       .links {
         position: fixed;
         bottom: 2%;
-        font-size: 2em;
       }
 
       @font-face {
@@ -52,8 +51,8 @@
 
       a:link,
       a:visited {
-        color: blue;
-        text-decoration: underline;
+        color: white;
+        text-decoration: none;
       }
 
       a:hover {
@@ -66,11 +65,18 @@
   <body>
     <div class="container">
       <div class="title">
-        <span>We Are On <br>Borrowed <br>Time</span>
+        <span>We Are On <br />Borrowed <br />Time <</span>
+      </div>
+
+      <div class="links">
+        <br />
+        <a href="active.html">active</a>
+        <a href="passive.html">passive</a>
+        <a href="dataviz.html">dataviz</a>
       </div>
 
       <div class="description">
-        is a week-long documentation and is a reflection on hyperconsumerism in
+        is an extension of the publication. week-long documentation and is a reflection on hyperconsumerism in
         the digital age and visualizes our loss of time. It explores both
         passive and active notifications visually. This website mimics how
         digital notifications interrupt our lives and influence our behavior.
@@ -78,13 +84,6 @@
       </div>
     </div>
 
-<!--     <canvas id="BackgroundCanvas"></canvas> -->
-
-    <!--<div class="links">
-  <br/>
-  <a href="active.html">active</a>
-  <a href="passive.html">passive</a>
-  <a href="dataviz.html">dataviz</a>
-</div>!-->
+    <!--     <canvas id="BackgroundCanvas"></canvas> -->
   </body>
 </html>
