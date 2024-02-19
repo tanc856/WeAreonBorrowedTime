@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
   
   canvas.width= window.innerWidth;
 canvas.height = window.innerHeight;
+  
+  console.log('Window inner width:', window.innerWidth);
+    console.log('Window inner height:', window.innerHeight);
 
     let time = 0.5;
     const characters = "is a week-long documentation and is a reflection on hyperconsumerism in the digital age and visualizes our loss of time. It explores both passive and active notifications visually. This website mimics how digital notifications interrupt our lives and influence our behavior. The timing of each ad reflects real-life documentation.";
     let frequency = 0.6;
-    let amplitude = 400;
+    let amplitude = 1400;
 
     function drawControlledSineWave() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
