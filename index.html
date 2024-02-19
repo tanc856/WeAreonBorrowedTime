@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.typekit.net/jcz3xdk.css">
-  <!--<script src="index.js"></script>!-->
-  <title>THESIS-HOMEPAGE</title>
-</head>
-<body>
-  <div class="title">
-    <span>We Are On Borrowed Time</span>
-  </div>
-  
-  <canvas id="BackgroundCanvas"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/jcz3xdk.css" />
+    <!--<script src="index.js"></script>!-->
+    <title>THESIS-HOMEPAGE</title>
+  </head>
+  <body>
+    <div class="title">
+      <span>We Are On Borrowed Time</span>
+    </div>
 
-  <!--<div class="links">
+    <div class="description">
+      is a week-long documentation and is a reflection on hyperconsumerism in
+      the digital age and visualizes our loss of time. It explores both passive
+      and active notifications visually. This website mimics how digital
+      notifications interrupt our lives and influence our behavior. The timing
+      of each ad reflects real-life documentation.
+    </div>
+
+    <canvas id="BackgroundCanvas"></canvas>
+
+    <!--<div class="links">
     <br/>
     <a href="active.html">active</a>
     <a href="passive.html">passive</a>
     <a href="dataviz.html">dataviz</a>
   </div>!-->
-  
-  <style>
-    body {
-      font-family: "plantin", sans-serif;
-      color: blue;
-      margin: 2;
-      padding: 5px;
-    }
 
-    .title {
-      font-family: "GapSans";
-      font-size: 5em;
-      text-align: center;
-      width: 70%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    <style>
+      body {
+        font-family: "plantin", sans-serif;
+        color: blue;
+        padding: 0px;
+        margin-top: 24px;
+        margin-bottom: 34px;
+        margin-left: 24px;
+      }
 
+      .title {
+        font-family: "GapSans";
+        font-size: 6em;
+        text-align: left;
+        width: 100%;
+        position: relative;
+        /*             top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+      }
 
-    .links {
-      position: fixed;
-      bottom: 2%;
-      font-size: 2em;
-    }
+      .links {
+        position: fixed;
+        bottom: 2%;
+        font-size: 2em;
+      }
 
+      @font-face {
+        font-family: "GapSans";
+        src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
+          format("woff");
+      }
 
-    @font-face {
-      font-family: "GapSans";
-      src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
-        format("woff");
-    }
+      a:link,
+      a:visited {
+        color: blue;
+        text-decoration: underline;
+      }
 
-    a:link,
-    a:visited {
-      color: blue;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: blue;
-      background-color: transparent;
-      text-decoration: italic;
-    }
-  </style>
-</body>
+      a:hover {
+        color: blue;
+        background-color: transparent;
+        text-decoration: italic;
+      }
+    </style>
+  </body>
 </html>
