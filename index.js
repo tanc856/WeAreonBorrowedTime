@@ -5,14 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    console.log('Window inner width:', window.innerWidth);
-    console.log('Window inner height:', window.innerHeight);
-
     let time = 0;
     const paragraph = "is a week-long documentation and is a reflection on hyperconsumerism in the digital age and visualizes our loss of time. It explores both passive and active notifications visually. This website mimics how digital notifications interrupt our lives and influence our behavior. The timing of each ad reflects real-life documentation.";
 
     const fontSize = 24;
-    const fontFamily = 'Arial';
+    const fontFamily = '"plantin", sans-serif';
     const textColor = 'blue';
 
     function drawParagraph() {
@@ -28,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ctx.fillText(paragraph, x, canvas.height / 2);
 
         // Increment time for continuous animation
-        time += 1; // Adjust the speed of the animation
+        time += 2; // Adjust the speed of the animation
     }
 
     // Initial drawing
