@@ -7,19 +7,24 @@
     <!--<script src="index.js"></script>!-->
     <title>THESIS-HOMEPAGE</title>
     <style>
+      html,
+      body {
+        height: 98%; /* Set height to 100% of viewport */
+        margin-top: 7px;
+        margin-bottom: 5px;
+        margin-left: 14px;
+        margin-right: 14px;
+      }
+
       body {
         font-family: "plantin", sans-serif;
         color: blue;
-        padding: 0px;
-        margin-top: 24px;
-        margin-bottom: 34px;
-        margin-left: 24px;
-        margin-right: 24px;
       }
 
       .container {
         display: flex;
         flex-direction: column;
+        height: 98%;
       }
 
       .title {
@@ -30,8 +35,7 @@
 
       .description {
         font-size: 1.5em;
-        position: absolute;
-        bottom: 0;
+        margin-top: auto; /* Push description to the bottom */
       }
 
       .links {
@@ -62,7 +66,7 @@
   <body>
     <div class="container">
       <div class="title">
-        <span>We Are On Borrowed Time</span>
+        <span>We Are On <br>Borrowed <br>Time</span>
       </div>
 
       <div class="description">
@@ -74,13 +78,13 @@
       </div>
     </div>
 
-    <canvas id="BackgroundCanvas"></canvas>
+<!--     <canvas id="BackgroundCanvas"></canvas> -->
 
     <!--<div class="links">
-    <br/>
-    <a href="active.html">active</a>
-    <a href="passive.html">passive</a>
-    <a href="dataviz.html">dataviz</a>
-  </div>!-->
+  <br/>
+  <a href="active.html">active</a>
+  <a href="passive.html">passive</a>
+  <a href="dataviz.html">dataviz</a>
+</div>!-->
   </body>
 </html>
