@@ -17,20 +17,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
         ctx.font = `${fontSize}px ${fontFamily}`;
         ctx.fillStyle = textColor;
-
-        // Calculate the position for the paragraph
-        const x = canvas.width - (time % (canvas.width + ctx.measureText(paragraph).width));
-
-        // Draw the paragraph at the calculated position
-        ctx.fillText(paragraph, x, canvas.height / 2);
+      
+      let x = canvas.width - (time % (canvas.width + ctx.measureText(paragraph).width));
+        let y = fontSize;
+      
+      // Draw the paragraph line by line
+        let linesDrawn = 0;
+        while (y < canvas.height) {
+            ctx.fillText(paragraph, x, y);
+            y += fontSize * 1.5; // Adjust line spacing as needed
+            linesDrawn++;
+        }
 
         // Increment time for continuous animation
-        time += 2; // Adjust the speed of the animation
-    }
+        time += 1; // Adjust the speed of the animation
 
-    // Initial drawing
+        // Reset time and clear the canvas when all lines are drawn
+        if (linesDrawn * (fontSize * 1.5) >= canvas.height) {
+            time = 0;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    }
+  
+  // Initial drawing
     drawParagraph();
 
     // Start default animation
     setInterval(drawParagraph, 30); // Adjust the interval as needed
+
 });
