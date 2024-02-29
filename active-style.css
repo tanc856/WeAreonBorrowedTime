@@ -1,5 +1,5 @@
 body {
-  font-family: GTAlpinaTypewriter;
+  font-family: "plantin";
   line-height: 1.3;
   overflow-y: auto;
   font-size: 1em;
@@ -36,9 +36,9 @@ body {
 }
 
 @font-face {
-  font-family: "GTAlpinaTypewriter";
-  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/GT%20Alpina%20Typewriter%20Regular.otf?v=1707418832977")
-    format("woff");
+  font-family: "plantin", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 a:link,
