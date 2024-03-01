@@ -16,12 +16,21 @@
         margin-right: 14px; */
         padding: 2px;
       }
-      
 
       body {
         font-family: "plantin", sans-serif;
-        color: blue;
-        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/img019.jpg?v=1709265599428");
+        color: #0000ff;
+        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
+        background-position: center; /* Align the background image to the top center */
+        background-size: 150%; /* Ensure the background image covers the entire viewport */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        margin: 0; /* Remove default margin */
+        padding: 2px;
+        transition: background-size 1.5s; /* Apply transition to the background-size property */
+      }
+
+      body:hover {
+        background-size: 250% auto; /* Stretch the background image horizontally upon hover */
       }
 
       .container {
@@ -62,7 +71,7 @@
         justify-content: center;
         align-items: center;
       }
-      
+
       .description-content {
         font-size: 1.5em;
         color: #d4d4d4;
@@ -85,12 +94,12 @@
       a:link,
       a:visited {
         font-style: italic;
-        color: blue;
+        color: #0000ff;
         text-decoration: underline;
       }
 
       a:hover {
-        color: blue;
+        color: #0000ff;
         background-color: transparent;
         text-decoration: italic;
       }
