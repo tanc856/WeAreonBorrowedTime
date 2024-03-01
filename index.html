@@ -30,25 +30,32 @@
 
       .title {
         line-height: 95%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .web {
+        position: fixed;
+        bottom: 10px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       .title,
       .web {
         font-family: "GapSans";
-        font-size: 12em;
+        font-size: 8em;
         z-index: 3;
         opacity: 100%;
-      }
-
-      .title,
-      .web {
         text-align: center;
       }
 
       .description-content {
         font-size: 1.5em;
         color: #d4d4d4;
-        transition: color 0.4s;
+        transition: color 1.2s;
         position: absolute;
         z-index: 1;
         top: 7px;
