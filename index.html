@@ -16,10 +16,12 @@
         margin-right: 14px; */
         padding: 2px;
       }
+      
 
       body {
         font-family: "plantin", sans-serif;
         color: blue;
+        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/img019.jpg?v=1709265599428");
       }
 
       .container {
@@ -52,6 +54,15 @@
         text-align: center;
       }
 
+      .description-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
       .description-content {
         font-size: 1.5em;
         color: #d4d4d4;
@@ -96,14 +107,16 @@
       </div>
     </div>
 
-    <div class="description-content" id="description">
-      is an extension of the publication. It features a week-long documentation
-      that is visualized through two experiments. The
-      <a href="active.html">active</a> page explores how notifications are
-      delivered to us in an abundant manner. While the
-      <a href="passive.html">passive</a> page showcase the visualization in a
-      much more subtle way. The timing of each ad reflects real-life
-      documentation.
+    <div class="description-container">
+      <div class="description-content">
+        is an extension of the publication. It features a week-long
+        documentation that is visualized through two experiments. The
+        <a href="active.html">active</a> page explores how notifications are
+        delivered to us in an abundant manner. While the
+        <a href="passive.html">passive</a> page showcase the visualization in a
+        much more subtle way. The timing of each ad reflects real-life
+        documentation.
+      </div>
     </div>
   </body>
 </html>
