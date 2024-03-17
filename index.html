@@ -12,7 +12,6 @@
         height: 100%;
         font-family: "plantin", sans-serif;
         color: #0000ff;
-        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
         background-position: center top; /* Align the background image to the top center */
         background-size: 130%; /* Ensure the background image covers the entire viewport */
         background-repeat: no-repeat; /* Do not repeat the background image */
@@ -20,7 +19,9 @@
         padding: 0;
         transition: background-size 1.2s; /* Apply transition to the background-size property */
         animation: slideBackground 100s linear infinite;
+        cursor: crosshair;
       }
+    
 
       @keyframes slideBackground {
         0% {
@@ -30,7 +31,16 @@
           background-position: 100% 0; /* Final position (fully scrolled horizontally) */
         }
       }
-
+      
+      .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
+    background-size: cover;
+}
 
       .title {
         line-height: 95%;
@@ -99,6 +109,8 @@
     </style>
   </head>
   <body>
+    <div class="background-container">
+
       <div class="title">
         <span>We Are On <br />Borrowed <br />Time</span>
       </div>
@@ -117,6 +129,7 @@
       <a href="passive.html">passive</a> page showcase the visualization in a
       much more subtle way. The timing of each ad reflects real-life
       documentation.
+    </div>
     </div>
   </body>
 </html>
