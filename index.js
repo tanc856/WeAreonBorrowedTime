@@ -1,7 +1,3 @@
-document.querySelector('.clicker').addEventListener('hover', function() {
-    document.querySelector('.title').style.display = 'none';
-});
-
 document.addEventListener('mousemove', function(event) { // Added 'event' parameter
     const container = document.querySelector('.background-container');
     const mouseX = event.clientX;
@@ -14,7 +10,9 @@ document.addEventListener('mousemove', function(event) { // Added 'event' parame
 
 function toggleElements(event) { // Added 'event' parameter
     const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
     const cursorX = event.clientX;
+    const cursorY = event.clientY;
     const threshold = 400; // Adjust this value as needed
 
     // Check if cursor is on the left side of the canvas
@@ -29,6 +27,14 @@ function toggleElements(event) { // Added 'event' parameter
         document.querySelector('.active').style.display = 'block';
     } else {
         document.querySelector('.active').style.display = 'none';
+    }
+
+   if (cursorY >= (windowHeight - threshold)) {
+        document.querySelector('.title').style.display = 'block';
+       document.querySelector('.web').style.display = 'none';
+    } else {
+        document.querySelector('.title').style.display = 'none';
+        document.querySelector('.web').style.display = 'block';
     }
 }
 

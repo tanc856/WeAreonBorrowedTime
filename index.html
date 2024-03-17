@@ -37,8 +37,7 @@
         transform: translateX(-50%);
         font-size: 10em;
       }
-
-      .web,
+      
       .passive,
       .active {
         display: none;
@@ -48,6 +47,10 @@
       }
 
       .web {
+        display: none;
+        position: fixed;
+        font-size: 3em;
+        top: 15px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -108,9 +111,10 @@
       }
 
       a:hover {
-        color: #0000ff;
-        background-color: transparent;
+        background-color: blue;
+        color: white;
         text-decoration: italic;
+        text-decoration: none;
       }
     </style>
   </head>
@@ -124,7 +128,13 @@
       
 
       <div class="web">
-        <span>(Web)</span>
+        <span>(Web) is an extension of the publication. It features a week-long
+        documentation that is visualized through two experiments. The
+        <a href="active.html">active</a> page explores how notifications are
+        delivered to us in an abundant manner. While the
+        <a href="passive.html">passive</a> page showcase the visualization in a
+        much more subtle way. The timing of each ad reflects real-life
+        documentation.</span>
       </div>
 
       <div class="passive">
@@ -137,16 +147,6 @@
       
       <div class="clicker" tabindex="1">+</div>
 
-
-      <div class="description-content">
-        is an extension of the publication. It features a week-long
-        documentation that is visualized through two experiments. The
-        <a href="active.html">active</a> page explores how notifications are
-        delivered to us in an abundant manner. While the
-        <a href="passive.html">passive</a> page showcase the visualization in a
-        much more subtle way. The timing of each ad reflects real-life
-        documentation.
-      </div>
     </div>
   </body>
 </html>
