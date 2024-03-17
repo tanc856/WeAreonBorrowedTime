@@ -15,7 +15,7 @@
         background-repeat: no-repeat;
         margin: 0;
         padding: 0;
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><text x="0" y="15" font-family="Arial" font-size="15">Enter</text></svg>'), auto;
+        cursor: ew-resize;
       }
       
       .background-container {
@@ -24,8 +24,41 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20tanc856.jpg?v=1710641776180");
-        background-size: 300%;
+        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
+       
+      }
+
+      .title {
+        line-height: 95%;
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .web,  {
+        position: fixed;
+        bottom: 10px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .title,
+      .web {
+        font-family: "GapSans";
+        font-size: 10em;
+        z-index: 3;
+        opacity: 100%;
+        text-align: center;
+      }
+
+      .description-content {
+        display: none;
+        font-size: 1.2em;
+        color: #d4d4d4;
+        transition: color 1.2s;
+        position: absolute;
+        top: 5px;
       }
 
       .clicker {
@@ -47,11 +80,51 @@
           format("woff");
       }
 
+      a:link,
+      a:visited {
+        font-style: italic;
+        color: #0000ff;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: #0000ff;
+        background-color: transparent;
+        text-decoration: italic;
+      }
 
     </style>
   </head>
   <body>
     <div class="background-container">
+      
+      <div class="title">
+        <span>We Are On <br />Borrowed <br />Time</span>
+      </div>
+
+      <div class="web">
+        <span>(Web)</span>
+      </div>
+      
+      <div class="passive">
+        <span>Passive</span>
+      </div>
+      
+      <div class="active">
+        <span>Active</span>
+      </div>
+
+      <div class="clicker" tabindex="1">+</div>
+
+      <div class="description-content">
+        is an extension of the publication. It features a week-long
+        documentation that is visualized through two experiments. The
+        <a href="active.html">active</a> page explores how notifications are
+        delivered to us in an abundant manner. While the
+        <a href="passive.html">passive</a> page showcase the visualization in a
+        much more subtle way. The timing of each ad reflects real-life
+        documentation.
+      </div>
     </div>
   </body>
 </html>
