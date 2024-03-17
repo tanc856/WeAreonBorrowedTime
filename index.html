@@ -16,6 +16,7 @@
         margin: 0;
         padding: 0;
         cursor: ew-resize;
+        overflow: hidden;
       }
       
       .background-container {
@@ -25,7 +26,6 @@
         width: 100%;
         height: 100%;
         background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
-       
       }
 
       .title {
@@ -50,6 +50,7 @@
 
       .title,
       .web, .passive, .active {
+        display: none;
         font-family: "GapSans";
         z-index: 3;
         opacity: 100%;
@@ -76,12 +77,12 @@
       }
 
       .clicker {
-        cursor: pointer;
         color: blue;
-        font-size: 10em;
+        font-size: 7em;
         position: fixed;
-        top: 5px;
-        left: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0px;
       }
 
       .clicker:hover + .description-content {

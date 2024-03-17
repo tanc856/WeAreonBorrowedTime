@@ -16,7 +16,6 @@ function toggleElements() {
         // Check if cursor is on the left side of the canvas
         if (cursorX <= threshold) {
             document.querySelector('.passive').style.display = 'block';
-            document.querySelector('.web').style.display = 'none';
         } else {
             document.querySelector('.passive').style.display = 'none';
             document.querySelector('.web').style.display = 'none';
