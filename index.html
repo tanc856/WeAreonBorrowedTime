@@ -12,40 +12,26 @@
         height: 100%;
         font-family: "plantin", sans-serif;
         color: #0000ff;
-        background-position: center top; /* Align the background image to the top center */
-        background-size: 130%; /* Ensure the background image covers the entire viewport */
-        background-repeat: no-repeat; /* Do not repeat the background image */
+        background-repeat: no-repeat;
         margin: 0;
         padding: 0;
-        transition: background-size 1.2s; /* Apply transition to the background-size property */
-        animation: slideBackground 100s linear infinite;
         cursor: crosshair;
-      }
-    
-
-      @keyframes slideBackground {
-        0% {
-          background-position: 0 0; /* Initial position */
-        }
-        100% {
-          background-position: 100% 0; /* Final position (fully scrolled horizontally) */
-        }
       }
       
       .background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
-    background-size: cover;
-}
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Loop%20Scans%20from%20Newschool%20(1).jpg?v=1709265920973");
+       
+      }
 
       .title {
         line-height: 95%;
         position: fixed;
-        top: 15px; 
+        top: 15px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -80,7 +66,7 @@
         color: blue;
         font-size: 10em;
         position: fixed;
-        top: 5px; 
+        top: 5px;
         left: 20px;
       }
 
@@ -110,7 +96,6 @@
   </head>
   <body>
     <div class="background-container">
-
       <div class="title">
         <span>We Are On <br />Borrowed <br />Time</span>
       </div>
@@ -119,17 +104,17 @@
         <span>(Web)</span>
       </div>
 
-    <div class="clicker" tabindex="1">+</div>
+      <div class="clicker" tabindex="1">+</div>
 
-    <div class="description-content">
-      is an extension of the publication. It features a week-long documentation
-      that is visualized through two experiments. The
-      <a href="active.html">active</a> page explores how notifications are
-      delivered to us in an abundant manner. While the
-      <a href="passive.html">passive</a> page showcase the visualization in a
-      much more subtle way. The timing of each ad reflects real-life
-      documentation.
-    </div>
+      <div class="description-content">
+        is an extension of the publication. It features a week-long
+        documentation that is visualized through two experiments. The
+        <a href="active.html">active</a> page explores how notifications are
+        delivered to us in an abundant manner. While the
+        <a href="passive.html">passive</a> page showcase the visualization in a
+        much more subtle way. The timing of each ad reflects real-life
+        documentation.
+      </div>
     </div>
   </body>
 </html>
