@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const columns = document.querySelectorAll(".column");
-  const replacementWords = ["Suggested for you", "Special promotional CD term marcus by GoldmanSachs", "Elevate your fitness game this winter plus a free shaker"];
-  const maxReplacements = 10; // Maximum number of replacements
+  const replacementWords = ["Suggested for you", "Special promotional CD term marcus by GoldmanSachs", "Elevate your fitness game this winter plus a free shaker", "Get one month free of classpass", "Curology skincare treat acne, fine lines, and more. "];
+  const maxReplacements = 5; // Maximum number of replacements
 let currentIndex = 0;
 
   function replaceWords(column) {

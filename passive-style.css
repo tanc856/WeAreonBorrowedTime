@@ -13,7 +13,7 @@ body {
 }
 
 .highlight {
-  text-style: italic
+  font-style: italic;
 }
 
 @font-face {
