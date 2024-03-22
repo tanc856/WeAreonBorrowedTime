@@ -1,28 +1,30 @@
 document.addEventListener("DOMContentLoaded", function() {
   const columns = document.querySelectorAll(".column");
-  const replacementWords = ["New Arrivals", "Sale Ends Soon!", "Freebie Frenzy", "Your Exclusive Offer Awaits", "New Markdowns Added", "Don't Miss Out", "Act Fast!"];
-  let currentIndex = 0;
-  let replacementCounter = 0;
+  const replacementWords = ["Suggested for you", "Special promotional CD term marcus by GoldmanSachs", "Elevate your fitness game this winter plus a free shaker"];
   const maxReplacements = 10; // Maximum number of replacements
+let currentIndex = 0;
 
   function replaceWords(column) {
-  const words = column.textContent.split(" ");
-  let replacementsMade = 0;
+    const words = column.textContent.split(" ");
+    let replacementCounter = 0; // Reset replacement counter for each paragraph
 
-  // Check if replacement should occur (randomly)
-  words.forEach((word, index) => {
-    if (Math.random() < 0.5 && replacementsMade < maxReplacements) {
-      // Replace a random word with the replacement words
-      const randomWord =
-        replacementWords[Math.floor(Math.random() * replacementWords.length)];
-      words[index] = `<span class="highlight">${randomWord}</span>`;
-      replacementsMade++; // Increment replacements counter
-    }
-  });
+    // Create an array to store the modified words
+    const modifiedWords = words.map(word => {
+      // Check if replacement should occur (randomly)
+      if (Math.random() < 0.1 && replacementCounter < maxReplacements) {
+        // Replace a random word with the replacement words
+        const randomWord =
+          replacementWords[Math.floor(Math.random() * replacementWords.length)];
+        replacementCounter++; // Increment replacements counter
+        return `<span class="highlight">${randomWord}</span>`;
+      } else {
+        return word; // Keep the original word
+      }
+    });
 
-  // Update the column's content
-  column.innerHTML = words.join(" ");
-}
+    // Update the column's content
+    column.innerHTML = modifiedWords.join(" ");
+  }
 
   columns.forEach((column, index) => {
     column.style.opacity = 0; // Initially hide paragraphs
