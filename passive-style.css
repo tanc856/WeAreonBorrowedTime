@@ -7,16 +7,9 @@ body {
 
 .column {
   display: inline-block; /* Use inline-block for columns */
-  width: calc(25%);
+  width: calc(30%);
   margin-right: 20px; /* Add margin between columns */
   margin-bottom: 20px; /* Add margin between rows */
-  transition: width 0.5s; /* Transition width property */
-}
-
-.column:hover {
-  width: calc(40%);
-  font-size: 2em;
-  transition: flex 2s, font-size 2s;
 }
 
 .highlight {
