@@ -1,45 +1,19 @@
-const scrollSpeed = 0.3; //speed of automatic page scrolling
-const replacementWords = ["New Arrivals", "Sale Ends Soon!", "Freebie Frenzy", "Your Exclusive Offer Awaits", "New Markdowns Added", "Don't Miss Out", "Act Fast!"];
-
-let replacementCounter = 0;
-const maxReplacements = 30; // Maximum number of replacements
-
-function autoScroll() {
-  document.body.scrollTop += scrollSpeed;
-  document.documentElement.scrollTop += scrollSpeed;
-
-  setTimeout(autoScroll, 100);
-}
-
-function replaceWords() {
+document.addEventListener("DOMContentLoaded", function() {
   const columns = document.querySelectorAll(".column");
-
-  columns.forEach((column) => {
-    const words = column.textContent.split(" ");
-
-    // Check if replacement should occur (randomly)
-    if (Math.random() < 0.2 && replacementCounter < maxReplacements) {
-      // Adjust the probability as needed
-      // Replace a random word with the replacement words
-      const randomIndex = Math.floor(Math.random() * words.length);
-      const randomWord =
-        replacementWords[Math.floor(Math.random() * replacementWords.length)];
-      words[randomIndex] = `<span class="highlight">${randomWord}</span>`;
-
-      // Update the column's content
-      column.innerHTML = words.join(" ");
-
-      replacementCounter++; // Increment replacement counter
-    }
+  
+  columns.forEach((column, index) => {
+    column.style.opacity = 0; // Initially hide paragraphs
+    column.dataset.index = index; // Set data-index attribute to keep track of the index
   });
 
-  // Call the function recursively if the replacement counter is less than the maximum
-  if (replacementCounter < maxReplacements) {
-    setTimeout(replaceWords, 1000); // Adjust the interval as needed, the bigger the slower
-  }
-}
+  let currentIndex = 0;
 
-window.onload = function () {
-  autoScroll();
-  replaceWords();
-};
+  function showNextParagraph() {
+    if (currentIndex < columns.length) {
+      columns[currentIndex].style.opacity = 1; // Show next paragraph
+      currentIndex++;
+    }
+  }
+
+  document.addEventListener("click", showNextParagraph);
+});
