@@ -7,7 +7,6 @@ body {
 
 .column {
   display: inline-block; /* Use inline-block for columns */
-  text-align: center;
   width: calc(25%);
   margin-right: 20px; /* Add margin between columns */
   margin-bottom: 20px; /* Add margin between rows */
@@ -22,7 +21,8 @@ body {
 
 .highlight {
   background-color: #0000FF;
-  color: white;
+  color: white; /* Start with transparent color */
+  transition: color 0.5s ease-in-out; /* Add transition effect */
 }
 
 @font-face {
