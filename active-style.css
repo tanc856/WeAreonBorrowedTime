@@ -37,17 +37,13 @@ body {
   bottom: 0px;
 }
 
+.flex-container.hovered {
+  opacity: 0.3;
+}
+
 .clicker-desc {
-  display: none; 
-  padding: 50px;
-}
-
-.clicker:hover + .flex-container {
-  opacity: 30%;
-}
-
-.clicker:hover + .clicker-desc {
-  display: block; 
+  display: none;
+  padding: 20px;
 }
 
 @font-face {

@@ -16,6 +16,26 @@ body {
   font-style: italic;
 }
 
+.clicker {
+  color: blue;
+  font-size: 5em;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+}
+
+.clicker-desc {
+  display: none;
+  padding: 20px;
+}
+
+@font-face {
+  font-family: "GapSans";
+  src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
+    format("woff");
+}
+
 @font-face {
   font-family: "plantin", sans-serif;
   font-weight: 400;
@@ -24,13 +44,11 @@ body {
 
 a:link,
 a:visited {
-  color: black;
-  background-color: transparent;
-  text-decoration: underline;
+  color: #0000ff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: black;
-  background-color: transparent;
-  text-decoration: italic;
+  font-style: none;
+  text-decoration: none;
 }
