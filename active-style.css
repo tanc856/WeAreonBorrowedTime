@@ -5,8 +5,8 @@ body {
   font-size: 1.3em;
 }
 
-.flex-container, .clicker-desc {
-  max-height: 80vh; /* Limiting the maximum height to 80% of the viewport height */
+.flex-container {
+  max-height: 70vh; /* Limiting the maximum height to 80% of the viewport height */
   overflow-y: auto; /* Adding scrollbar if content exceeds the max height */
 }
 
@@ -16,7 +16,7 @@ body {
   transition: flex 1s, font-size 1s;
   line-height: 1.3;
   max-width: 90%;
-  max-height: 80%; /* Limiting the maximum height to 80% of the container's height */
+  max-height: 70%; /* Limiting the maximum height to 80% of the container's height */
   margin: auto;
   overflow-wrap: break-word;
 }
@@ -39,10 +39,11 @@ body {
 
 .clicker-desc {
   display: none; 
+  padding: 50px;
 }
 
 .clicker:hover + .flex-container {
-  display: none; 
+  opacity: 30%;
 }
 
 .clicker:hover + .clicker-desc {
