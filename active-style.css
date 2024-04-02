@@ -5,12 +5,12 @@ body {
   font-size: 1.3em;
 }
 
-.flex-container {
+.flex-container, .clicker-desc {
   max-height: 80vh; /* Limiting the maximum height to 80% of the viewport height */
   overflow-y: auto; /* Adding scrollbar if content exceeds the max height */
 }
 
-.column {
+.column, .clicker-desc {
   flex-direction: column;
   padding: 8px;
   transition: flex 1s, font-size 1s;
@@ -37,8 +37,16 @@ body {
   bottom: 0px;
 }
 
-.clicker:hover + .description-content {
-  display: block;
+.clicker-desc {
+  display: none; 
+}
+
+.clicker:hover + .flex-container {
+  display: none; 
+}
+
+.clicker:hover + .clicker-desc {
+  display: block; 
 }
 
 @font-face {
@@ -60,12 +68,12 @@ body {
 }
 
 a:link,
-      a:visited {
-        color: #0000ff;
-        text-decoration: none;
-      }
+a:visited {
+  color: #0000ff;
+  text-decoration: none;
+}
 
-      a:hover {
-        font-style: none;
-        text-decoration: none;
-      }
+a:hover {
+  font-style: none;
+  text-decoration: none;
+}
