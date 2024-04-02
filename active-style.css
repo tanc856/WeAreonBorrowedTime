@@ -5,6 +5,23 @@ body {
   font-size: 1.3em;
 }
 
+.passive,.active {
+        font-family: "GapSans";
+        z-index: 3;
+        opacity: 100%;
+        text-align: center;
+      }
+
+      .passive {
+        left: 10%;
+        transform: translateX(-50%);
+      }
+
+      .active {
+        left: 90%;
+        transform: translateX(-50%);
+      }
+
 .flex-container {
   left: 2;
   display: flex;
@@ -41,6 +58,13 @@ body {
 font-weight: 400;
 font-style: normal;
 }
+
+ @font-face {
+        font-family: "GapSans";
+        src: url("https://cdn.glitch.global/9c82d924-e73e-4595-a15f-0d5582f46ea0/Gap%20Sans%20Bold.ttf?v=1707419106611")
+          format("woff");
+      }
+
 
 a:link,
 a:visited {
