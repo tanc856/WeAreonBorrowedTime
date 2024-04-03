@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const scrollSpeed = 0.3; //speed of automatic page scrolling
-  const replacementWords = ["Yakult 25 25", "8 platforms to find entry level creative", "jobs Looking for the new role to start the year? we've got just the thing for you.", , "threads", "blogto", "RUN TO TARGET", "suggested for you", "want long want strong equinox", "Afterlife Paris", "goldman sachs ad", "Our new design is live!", "Postage stamp design", "Want vigor, want it all", "Suggested for you", "A must after have dinner", "Tarifa de envio", "Get your free year in strava",  "BPN nutrition we fuel for performance", "My roman empire is how I join the barebell community", "lemon meringue bars nyt cooking", "Evolve you new year's promo, 30% off", "Polar usa amtrak. $1 join fee"];
+  const replacementWords = ["Yakult 25 25", "8 platforms to find entry level creative", "jobs Looking for the new role to start the year? we've got just the thing for you.", "threads", "blogto", "RUN TO TARGET", "Suggested for you", "Want long want strong equinox", "Afterlife Paris", "goldman sachs ad", "Our new design is live!", "Postage stamp design", "Want vigor, want it all", "Suggested for you", "A must after have dinner", "Tarifa de envio", "Get your free year in strava",  "BPN nutrition we fuel for performance", "My roman empire is how I join the barebell community", "lemon meringue bars nyt cooking", "Evolve you new year's promo, 30% off", "Polar usa amtrak. $1 join fee"];
 
   let replacementCounter = 0;
   const maxReplacements = 40; // Maximum number of replacements

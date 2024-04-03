@@ -8,18 +8,16 @@ body {
 .column {
   display: inline-block; /* Use inline-block for columns */
   vertical-align: top; /* Align columns to the top */
-  width: 30%; /* Adjust the width of each column as needed */
+  width: 20%; /* Adjust the width of each column as needed */
   margin-right: 20px; /* Add margin between columns */
 }
 
 .flex-container {
   padding-top: 20px;
-  max-height: 75vh; /* Limiting the maximum height to 80% of the viewport height */
+  max-height: 90vh; /* Limiting the maximum height to 80% of the viewport height */
   overflow-y: auto; /* Adding scrollbar if content exceeds the max height */
-  column-count: 3; /* Set the number of columns */
-  column-gap: 20px; /* Add gap between columns */
+  column-gap: 5px; /* Add gap between columns */
 }
-
 
 .highlight {
   font-style: italic;
