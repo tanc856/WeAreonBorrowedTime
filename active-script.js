@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const replacementWords = ["New Arrivals", "Sale Ends Soon!", "Freebie Frenzy", "Your Exclusive Offer Awaits", "New Markdowns Added", "Don't Miss Out", "Act Fast!"];
 
   let replacementCounter = 0;
-  const maxReplacements = 30; // Maximum number of replacements
+  const maxReplacements = 40; // Maximum number of replacements
 
   function autoScroll() {
     document.body.scrollTop += scrollSpeed;
