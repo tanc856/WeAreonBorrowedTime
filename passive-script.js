@@ -1,51 +1,60 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const columns = document.querySelectorAll(".column");
-  const replacementWords = ["Suggested for you", "Special promotional CD term marcus by GoldmanSachs", "Elevate your fitness game this winter plus a free shaker", "Get one month free of classpass", "Curology skincare treat acne, fine lines, and more. "];
-  const maxReplacements = 5; // Maximum number of replacements
-let currentIndex = 0;
+  // Your JavaScript code here
+  const clicker = document.querySelector('.clicker');
+  const flexContainer = document.querySelector('.flex-container');
+  const clickerDesc = document.querySelector('.clicker-desc');
 
-  function replaceWords(column) {
-    const words = column.textContent.split(" ");
-    let replacementCounter = 0; // Reset replacement counter for each paragraph
-
-    // Create an array to store the modified words
-    const modifiedWords = words.map(word => {
-      // Check if replacement should occur (randomly)
-      if (Math.random() < 0.1 && replacementCounter < maxReplacements) {
-        // Replace a random word with the replacement words
-        const randomWord =
-          replacementWords[Math.floor(Math.random() * replacementWords.length)];
-        replacementCounter++; // Increment replacements counter
-        return `<span class="highlight">${randomWord}</span>`;
-      } else {
-        return word; // Keep the original word
-      }
-    });
-
-    // Update the column's content
-    column.innerHTML = modifiedWords.join(" ");
-  }
-
-  columns.forEach((column, index) => {
-    column.style.opacity = 0; // Initially hide paragraphs
-    column.dataset.index = index; // Set data-index attribute to keep track of the index
-    column.addEventListener("click", () => {
-      if (column.style.opacity === "1") {
-        replaceWords(column);
-      }
-    });
+  clicker.addEventListener('mouseenter', () => {
+    flexContainer.classList.add('hovered');
+    clickerDesc.style.display = 'block';
   });
 
-  function showNextParagraph() {
-    if (currentIndex < columns.length) {
-      columns[currentIndex].style.opacity = 1; // Show next paragraph
-      currentIndex++;
+  clicker.addEventListener('mouseleave', () => {
+    flexContainer.classList.remove('hovered');
+    clickerDesc.style.display = 'none';
+  });
+
+  const scrollSpeed = 0.3; //speed of automatic page scrolling
+  const replacementWords = ["Yakult 25 25", "8 platforms to find entry level creative", "jobs Looking for the new role to start the year? we've got just the thing for you.", "DID YOU KNOW", "threads", "blogto", "RUN TO TARGET", "suggested for you", "want long want strong equinox", "Afterlife Paris", "goldman sachs ad", "Our new design is live!", "Postage stamp design", "Want vigor, want it all", "Suggested for you", "A must after have dinner", "Tarifa de envio", "Get your free year in strava",  "BPN nutrition we fuel for performance", "My roman empire is how I join the barebell community", "lemon meringue bars nyt cooking", "Evolve you new year's promo, 30% off", "Polar usa amtrak. $1 join fee"];
+
+  let replacementCounter = 0;
+  const maxReplacements = 40; // Maximum number of replacements
+
+  function autoScroll() {
+    document.body.scrollTop += scrollSpeed;
+    document.documentElement.scrollTop += scrollSpeed;
+
+    setTimeout(autoScroll, 100);
+  }
+
+  function replaceWords() {
+    const columns = document.querySelectorAll(".column");
+
+    columns.forEach((column) => {
+      const words = column.textContent.split(" ");
+
+      // Check if replacement should occur (randomly)
+      if (Math.random() < 0.2 && replacementCounter < maxReplacements) {
+        // Adjust the probability as needed
+        // Replace a random word with the replacement words
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const randomWord =
+          replacementWords[Math.floor(Math.random() * replacementWords.length)];
+        words[randomIndex] = `<em class="highlight">${randomWord}</em>`;
+
+        // Update the column's content
+        column.innerHTML = words.join(" ");
+
+        replacementCounter++; // Increment replacement counter
+      }
+    });
+
+    // Call the function recursively if the replacement counter is less than the maximum
+    if (replacementCounter < maxReplacements) {
+      setTimeout(replaceWords, 800); // Adjust the interval as needed, the bigger the slower
     }
   }
 
-  window.onload = function () {
-    showNextParagraph(); // Show the first paragraph initially
-  };
-
-  document.addEventListener("click", showNextParagraph);
+  autoScroll();
+  replaceWords();
 });
