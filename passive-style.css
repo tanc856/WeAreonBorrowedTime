@@ -5,18 +5,21 @@ body {
   font-size: 1.3em;
 }
 
+.column {
+  display: inline-block; /* Use inline-block for columns */
+  vertical-align: top; /* Align columns to the top */
+  width: 30%; /* Adjust the width of each column as needed */
+  margin-right: 20px; /* Add margin between columns */
+}
+
 .flex-container {
   padding-top: 20px;
   max-height: 75vh; /* Limiting the maximum height to 80% of the viewport height */
   overflow-y: auto; /* Adding scrollbar if content exceeds the max height */
+  column-count: 3; /* Set the number of columns */
+  column-gap: 20px; /* Add gap between columns */
 }
 
-.column {
-  display: block; /* Use inline-block for columns */
-/*   width: calc(30%); */
-  margin-right: 20px; /* Add margin between columns */
-  margin-bottom: 20px; /* Add margin between rows */
-}
 
 .highlight {
   font-style: italic;
