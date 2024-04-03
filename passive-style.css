@@ -7,7 +7,7 @@ body {
 
 .flex-container {
   padding-top: 20px;
-  max-height: 90vh; /* Limiting the maximum height to 90% of the viewport height */
+  max-height: 80vh; /* Limiting the maximum height to 90% of the viewport height */
   overflow-y: auto; /* Adding scrollbar if content exceeds the max height */
   column-gap: 5px; /* Add gap between columns */
   margin: 0 auto; /* Center the flex container horizontally */
@@ -17,9 +17,8 @@ body {
   display: inline-block; 
   vertical-align: top; 
   text-align: center; 
-  width: 20%;
-  margin-right: 20px; 
-  padding: 10px;
+  width: 13%;
+  padding: 5px;
   transition: flex 0.5s, font-size 1s;
 }
 
